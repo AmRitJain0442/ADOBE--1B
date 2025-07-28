@@ -1,0 +1,40 @@
+# Persona-Driven Document Intelligence System Requirements
+# Complete dependencies for production-ready semantic analysis
+
+# Core Document Processing
+PyMuPDF==1.23.8              # PDF text extraction and processing
+
+# Machine Learning & NLP Models
+sentence-transformers==2.7.0  # Main model: all-MiniLM-L6-v2 (CPU optimized)
+transformers==4.40.2          # Hugging Face transformers for DistilBERT
+torch==2.1.1+cpu              # PyTorch backend (CPU-only optimization)
+huggingface-hub==0.23.2       # Compatible with sentence-transformers
+
+# Semantic Search & Ranking
+rank-bm25==0.2.2             # BM25 ranking algorithm
+scikit-learn==1.3.2          # Cosine similarity and ML utilities
+
+# Natural Language Processing
+nltk==3.8.1                  # Tokenization, stopwords, punkt
+numpy==1.24.3                # Numerical computations
+
+# Pre-trained Models Used:
+# 1. sentence-transformers/all-MiniLM-L6-v2 (~90MB) - Fast semantic embeddings
+# 2. distilbert-base-uncased (~250MB) - Smart decision engine for dynamic analysis
+# 
+# Total model size: ~340MB
+# CPU-only optimized for production deployment (no GPU required)
+# Uses CPU-only PyTorch builds to reduce image size and ensure compatibility
+
+# NLTK Data Downloads (automatic):
+# - punkt: Sentence tokenization
+# - stopwords: English stopwords corpus
+
+# System Features:
+# - Zero hardcoded keywords - fully dynamic semantic analysis
+# - Production-ready keyword extraction using compound patterns
+# - Context-aware persona adaptation
+# - CPU-optimized inference (no GPU required)
+# - Intelligent answer generation with persona-specific styling
+
+# For complete setup and execution instructions, see README.md
